@@ -1,10 +1,4 @@
 #include<stdio.h>
-int main() {
-	for (int i = 0;i<=100;i++) {
-		printf("%d\n", i);
-	}
-	return 0;
-}
 #include<windows.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -42,7 +36,7 @@ struct {
 	int nStay;
 }Enemy[MAXENEMY];
 
-char* Enemyit[] = { "¡Ø¡á¡Ø","¡ã¡á¡ã","¡İ¡ß¡İ","¢Æ¢Ç¢Æ" };
+char* Enemyit[] = { "â€»â– â€»","â–²â– â–²","â—â—†â—","â–’â–¤â–’" };
 /*====================================*/
 struct {
 	BOOL exist;
@@ -156,18 +150,18 @@ void Menu() {
 		system("cls");
 		
 		printf("\n\n\n\n\n\n");
-		printf("                         ¡á¡á¡á¡á¡á     ¡á¡á¡á      ¡á¡á¡á       ¡á¡á¡á¡á       ¡á¡á¡á\n");
-		printf("                         ¡á            ¡á    ¡á    ¡á    ¡á     ¡á       ¡á    ¡á    ¡á\n");
-		printf("                         ¡á            ¡á     ¡á   ¡á     ¡á   ¡á         ¡á   ¡á     ¡á\n");
-		printf("                         ¡á¡á¡á¡á¡á    ¡á    ¡á    ¡á    ¡á   ¡á           ¡á  ¡á    ¡á\n");
-		printf("                         ¡á            ¡á  ¡á      ¡á  ¡á     ¡á           ¡á  ¡á  ¡á\n");
-		printf("                         ¡á            ¡á   ¡á     ¡á    ¡á    ¡á         ¡á   ¡á    ¡á\n");
-		printf("                         ¡á            ¡á    ¡á    ¡á     ¡á    ¡á       ¡á    ¡á     ¡á\n");
-		printf("                         ¡á¡á¡á¡á¡á    ¡á      ¡á  ¡á      ¡á    ¡á¡á¡á¡á      ¡á      ¡á\n\n\n\n\n\n\n\n");
-		printf("                                                  1¹ø:GAME START                                                        \n\n");
-		printf("                                                  2¹ø:INFORMATION                                                       \n\n");
-		printf("                                                   3¹ø:RANKING                                                           \n\n");
-		printf("                                                   ¹øÈ£ ÀÔ·Â>>                                                         \n\n");
+		printf("                         â– â– â– â– â–      â– â– â–       â– â– â–        â– â– â– â–        â– â– â– \n");
+		printf("                         â–             â–     â–     â–     â–      â–        â–     â–     â– \n");
+		printf("                         â–             â–      â–    â–      â–    â–          â–    â–      â– \n");
+		printf("                         â– â– â– â– â–     â–     â–     â–     â–    â–            â–   â–     â– \n");
+		printf("                         â–             â–   â–       â–   â–      â–            â–   â–   â– \n");
+		printf("                         â–             â–    â–      â–     â–     â–          â–    â–     â– \n");
+		printf("                         â–             â–     â–     â–      â–     â–        â–     â–      â– \n");
+		printf("                         â– â– â– â– â–     â–       â–   â–       â–     â– â– â– â–       â–       â– \n\n\n\n\n\n\n\n");
+		printf("                                                  1ë²ˆ:GAME START                                                        \n\n");
+		printf("                                                  2ë²ˆ:INFORMATION                                                       \n\n");
+		printf("                                                   3ë²ˆ:RANKING                                                           \n\n");
+		printf("                                                   ë²ˆí˜¸ ì…ë ¥>>                                                         \n\n");
 		
 		gotoxy(64, 28); scanf("%d", &n);
 		
@@ -191,21 +185,21 @@ void Menu() {
 
 void length() {
 	for (int i = 0; i < 40; i++) {
-		gotoxy(89, i); printf("¢Â");
+		gotoxy(89, i); printf("â—ˆ");
 	}
 }
 
 void Userinter() {
-	gotoxy(95, 2); printf("   ¢¸ E R R O R ¢º    ");
-	gotoxy(93, 4); printf("  ¢¸ S H O O T I N G ¢º  ");
+	gotoxy(95, 2); printf("   â—€ E R R O R â–¶    ");
+	gotoxy(93, 4); printf("  â—€ S H O O T I N G â–¶  ");
 
-	gotoxy(93, 8); printf("MOVE : LEFT ¡ç  ¡æ RIGHT");
+	gotoxy(93, 8); printf("MOVE : LEFT â†  â†’ RIGHT");
 
 	gotoxy(95, 14); printf("<< GUN : SPACE BAR >>");
 	
 	gotoxy(95, 17); printf("<< MISSILE KEY : D >>");
 	
-	gotoxy(98, 21); printf("¡Øº°»çÅÁÀº 2¹ß¾¿!");
+	gotoxy(98, 21); printf("â€»ë³„ì‚¬íƒ•ì€ 2ë°œì”©!");
 	
 	gotoxy(93, 25); printf("<< PLAYER COLOR : GREEN >>");
 	
@@ -218,7 +212,7 @@ void Userinter() {
 
 void Drawplayer() {
 	Color(RED);
-	gotoxy(px, 39); printf("<¢¸¡ã¢º>");
+	gotoxy(px, 39); printf("<â—€â–²â–¶>");
 	Color(GRAY);
 }
 
@@ -270,7 +264,7 @@ void Eraseplayer() {
 
 void Drawbullet(int i) {
 	Color(GREEN);
-	gotoxy(Bullet[i].x, Bullet[i].y); printf("¡Ú");
+	gotoxy(Bullet[i].x, Bullet[i].y); printf("â˜…");
 	Color(GRAY);
 }
 
@@ -298,9 +292,9 @@ void Movebullet() {
 
 void Drawmissile() {
 	Color(RED);
-	gotoxy(mx, my - 2); printf("¡ã¡ã");
-	gotoxy(mx, my - 1); printf("¡Ú¡Ú");
-	gotoxy(mx, my);     printf("¡Ø¡Ø");
+	gotoxy(mx, my - 2); printf("â–²â–²");
+	gotoxy(mx, my - 1); printf("â˜…â˜…");
+	gotoxy(mx, my);     printf("â€»â€»");
 	Color(GRAY);
 }
 
@@ -397,7 +391,7 @@ void Moveenemy() {
 
 void Drawenb(int i) {
 	gotoxy(EnemyBullet[i].x, EnemyBullet[i].y);
-	printf("¡é");
+	printf("â†“");
 }
 
 void Eraseenb(int i) {
@@ -458,7 +452,7 @@ void Enemycollision() {
 			Enemy[i].type = -1;
 
 			gotoxy(Enemy[i].x - 3, Enemy[i].y);
-			printf("+20Á¡ È¹µæ!");
+			printf("+20ì  íšë“!");
 			score += 20;
 			Enemy[i].nFrame = Enemy[i].nStay = 50;
 			break;
@@ -469,7 +463,7 @@ void Enemycollision() {
 			Enemy[i].type = -1;
 
 			gotoxy(Enemy[i].x - 3, Enemy[i].y);
-			printf("+10Á¡ È¹µæ!");
+			printf("+10ì  íšë“!");
 			score += 10;
 			Enemy[i].nFrame = Enemy[i].nStay = 50;
 			break;
@@ -503,19 +497,19 @@ void Overment() {
 	Color(RED);
 	gotoxy(44, 17);
 	if (score <= 50) {
-		printf("ÀÌ·± Á¡¼ö°¡ ³ª¿Ã ¼ö°¡ ¾øÀ»ÅÙµ¥..");
+		printf("ì´ëŸ° ì ìˆ˜ê°€ ë‚˜ì˜¬ ìˆ˜ê°€ ì—†ì„í…ë°..");
 	}
 	else if (50 < score && score <= 100) {
-		printf("À½ Á¡¼ö°¡ ¾Æ½¬¿îµ¥¿ä ´õ È­ÀÌÆÃ!");
+		printf("ìŒ ì ìˆ˜ê°€ ì•„ì‰¬ìš´ë°ìš” ë” í™”ì´íŒ…!");
 	}
 	else if (100 < score && score <= 150) {
-		printf("ÁıÁß·Â ÃÖ°í! ´õ ³ôÀº °÷±îÁö¤¡!!");
+		printf("ì§‘ì¤‘ë ¥ ìµœê³ ! ë” ë†’ì€ ê³³ê¹Œì§€ã„±!!");
 	}
 	else if (150 < score && score <= 200) {
-		printf("ÁøÂ¥ ´ë´ÜÇÏ³×¿ä ¿©±â±îÁö¿À´Ù´Ï!");
+		printf("ì§„ì§œ ëŒ€ë‹¨í•˜ë„¤ìš” ì—¬ê¸°ê¹Œì§€ì˜¤ë‹¤ë‹ˆ!");
 	}
 	else {
-		printf("ÄªÂù½ºÆ¼Ä¿ 300°³!! ³Ê¹« ÀßÇØ¿ä!");
+		printf("ì¹­ì°¬ìŠ¤í‹°ì»¤ 300ê°œ!! ë„ˆë¬´ ì˜í•´ìš”!");
 	}
 
 }
@@ -523,13 +517,13 @@ void Overment() {
 void Gameover() {
 	system("cls");
 	char ch;
-	gotoxy(52, 12); printf("´ç½ÅÀÇ SCORE´Â?!");
-	gotoxy(38, 14); printf("¢Ã¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¢Ã");
-	gotoxy(38, 15); printf("¢Ã              SCORE : %d                 ¢Ã", score);
-	gotoxy(38, 16); printf("¢Ã                                        ¢Ã");
-	gotoxy(38, 17); printf("¢Ã                                        ¢Ã");
-	gotoxy(38, 18); printf("¢Ã                                        ¢Ã");
-	gotoxy(38, 19); printf("¢Ã¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¡ß¢Ã");
+	gotoxy(52, 12); printf("ë‹¹ì‹ ì˜ SCOREëŠ”?!");
+	gotoxy(38, 14); printf("â–£â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â–£");
+	gotoxy(38, 15); printf("â–£              SCORE : %d                 â–£", score);
+	gotoxy(38, 16); printf("â–£                                        â–£");
+	gotoxy(38, 17); printf("â–£                                        â–£");
+	gotoxy(38, 18); printf("â–£                                        â–£");
+	gotoxy(38, 19); printf("â–£â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â—†â–£");
 	
 	while (1) {
 		Overment();
@@ -544,7 +538,7 @@ void Gameover() {
 void Game() {
 	system("cls");
 	Color(RED);
-	gotoxy(px, 39); printf("<¢¸¡ã¢º>");
+	gotoxy(px, 39); printf("<â—€â–²â–¶>");
 	Color(GRAY);
 	randomize();
 	score = 0;
@@ -586,8 +580,8 @@ void Nonum() {
 	system("cls");
 	char ch;
 
-	gotoxy(47, 18); printf("Áö¿øÇÏÁö ¾Ê´Â ±â´ÉÀÔ´Ï´Ù.");
-	gotoxy(49, 33); printf("µ¹¾Æ°¡·Á¸é 'q' Å¬¸¯!");
+	gotoxy(47, 18); printf("ì§€ì›í•˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥ì…ë‹ˆë‹¤.");
+	gotoxy(49, 33); printf("ëŒì•„ê°€ë ¤ë©´ 'q' í´ë¦­!");
 
 	while (1) {
 		ch = getch();
@@ -599,23 +593,23 @@ void Nonum() {
 void Info() {
 	char ch;
 	system("cls");
-	gotoxy(45, 3); printf("°÷°÷¿¡¼­ ³ªÅ¸³ª°í ¿òÁ÷ÀÌ´Â ¿À·ùµéÀ»");
+	gotoxy(45, 3); printf("ê³³ê³³ì—ì„œ ë‚˜íƒ€ë‚˜ê³  ì›€ì§ì´ëŠ” ì˜¤ë¥˜ë“¤ì„");
 
-	gotoxy(42, 8); printf("º°»çÅÁ°ú ¹Ì»çÀÏÀ» ¹ß»çÇØ ¹°¸®Ä¡´Â ½´ÆÃ°ÔÀÓÀ»");
+	gotoxy(42, 8); printf("ë³„ì‚¬íƒ•ê³¼ ë¯¸ì‚¬ì¼ì„ ë°œì‚¬í•´ ë¬¼ë¦¬ì¹˜ëŠ” ìŠˆíŒ…ê²Œì„ì„");
 
-	gotoxy(51, 13); printf("c¾ğ¾î·Î ±¸ÇöÇÏ¿´½À´Ï´Ù!");
+	gotoxy(51, 13); printf("cì–¸ì–´ë¡œ êµ¬í˜„í•˜ì˜€ìŠµë‹ˆë‹¤!");
 
-	gotoxy(43, 18); printf("¡Ø¿À·ùµéÀº ÀÏÁ¤ È®·ü·Î °ø°İÀ» È¸ÇÇÇÕ´Ï´Ù!");
+	gotoxy(43, 18); printf("â€»ì˜¤ë¥˜ë“¤ì€ ì¼ì • í™•ë¥ ë¡œ ê³µê²©ì„ íšŒí”¼í•©ë‹ˆë‹¤!");
 
-	gotoxy(35, 23); printf("¡Ú º°»çÅÁÀ» Àß ÇÇÇÏ±â ¶§¹®¿¡ º°»çÅÁÀ¸·Î ¸ÂÃá´Ù¸é +20 Á¡ÀÔ´Ï´Ù!");
+	gotoxy(35, 23); printf("â˜… ë³„ì‚¬íƒ•ì„ ì˜ í”¼í•˜ê¸° ë•Œë¬¸ì— ë³„ì‚¬íƒ•ìœ¼ë¡œ ë§ì¶˜ë‹¤ë©´ +20 ì ì…ë‹ˆë‹¤!");
 
-	gotoxy(36, 28); printf("¡Ø¿À·ùµéÀº ÀÚ½ÅµéÀÇ ÃÑ¾ËÀ» »ç¶óÁöÁö ¾Ê°Ô ÇÏ´Â ¿À·ù¸¦ ³²±é´Ï´Ù.");
+	gotoxy(36, 28); printf("â€»ì˜¤ë¥˜ë“¤ì€ ìì‹ ë“¤ì˜ ì´ì•Œì„ ì‚¬ë¼ì§€ì§€ ì•Šê²Œ í•˜ëŠ” ì˜¤ë¥˜ë¥¼ ë‚¨ê¹ë‹ˆë‹¤.");
 	
-	gotoxy(44, 33); printf("¡ØÁ¶ÀÛ¹ıÀº °ÔÀÓÈ­¸é¿¡ ±¸Çö µÇ¾î ÀÖ½À´Ï´Ù.");
+	gotoxy(44, 33); printf("â€»ì¡°ì‘ë²•ì€ ê²Œì„í™”ë©´ì— êµ¬í˜„ ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
 
-	gotoxy(50, 36); printf("µ¹¾Æ°¡·Á¸é 'q' ´õºí Å¬¸¯!");
+	gotoxy(50, 36); printf("ëŒì•„ê°€ë ¤ë©´ 'q' ë”ë¸” í´ë¦­!");
 
-	gotoxy(52, 39); printf("Made by. ÀÌ¿î¸°,±è¹Î¼ö");
+	gotoxy(52, 39); printf("Made by. ì´ìš´ë¦°,ê¹€ë¯¼ìˆ˜");
 	
 	Cursorview(0);
 	system("pause>null");
@@ -631,7 +625,7 @@ void Rank_Draw() {
 	system("cls");
 	
 	printf("\n\n\n");
-	printf("                   ¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú<RA¢ÂNK>¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú\n");
+	printf("                   â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…<RAâ—ˆNK>â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…\n");
 
 	printf("                         <NAME>                                                      <SCORE>        \n");
 
@@ -648,16 +642,16 @@ int keycontrol() {
 
 void Rank_arr() {
 	int count = 0;   
-	//ÆÄÀÏ¿¡¼­ ·©Å·À» ºÒ·¯¿À´Â ¼ö¸¦ ÀúÀåÇÔ(ÀÌ ¼ö·Î ¹öºíÁ¤·ÄÀ» µ¹·Á¼­ ¿¬»êÀ» ÃÖ¼ÒÈ­ÇÔ)
+	//íŒŒì¼ì—ì„œ ë­í‚¹ì„ ë¶ˆëŸ¬ì˜¤ëŠ” ìˆ˜ë¥¼ ì €ì¥í•¨(ì´ ìˆ˜ë¡œ ë²„ë¸”ì •ë ¬ì„ ëŒë ¤ì„œ ì—°ì‚°ì„ ìµœì†Œí™”í•¨)
 	int temp;
 
 	int i = 0;
 	int score[10] = { 0, };
 	
-	FILE* fp = fopen("rank.txt", "r");   // ÆÄÀÏÀ» ÀĞ±â¼Ó¼ºÀ¸·Î ¿­¾îÁÜ
+	FILE* fp = fopen("rank.txt", "r");   // íŒŒì¼ì„ ì½ê¸°ì†ì„±ìœ¼ë¡œ ì—´ì–´ì¤Œ
 	if (fp == NULL) {
 
-		printf("·©Å· ºÒ·¯¿À±â¿¡ ½ÇÆĞÇß½À´Ï´Ù..");
+		printf("ë­í‚¹ ë¶ˆëŸ¬ì˜¤ê¸°ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤..");
 	
 	}
 	else {
@@ -666,7 +660,7 @@ void Rank_arr() {
 		for (int i = 0; i < 30; i++) {
 			fscanf(fp, "%s%d", player_rank[i].name, &player_rank[i].score);
 			if (player_rank[i].name != NULL) {     
-				//¸¸¾à ´ÙÀ½ ÀÔ·Â¹Ş´Â °ªÀÌ NULLÀÌ¸é ´õÀÌ»ó ÆÄÀÏ¿¡¼­ Á¤º¸¸¦ ±×¸¸¹ŞÀ½
+				//ë§Œì•½ ë‹¤ìŒ ì…ë ¥ë°›ëŠ” ê°’ì´ NULLì´ë©´ ë”ì´ìƒ íŒŒì¼ì—ì„œ ì •ë³´ë¥¼ ê·¸ë§Œë°›ìŒ
 
 			}
 			else {
@@ -674,7 +668,7 @@ void Rank_arr() {
 			}
 			count++;
 		}
-		for (int i = 0; i < 10; i++) {  //¹öºíÁ¤·Ä·Î Á¤¸®
+		for (int i = 0; i < 10; i++) {  //ë²„ë¸”ì •ë ¬ë¡œ ì •ë¦¬
 			for (int j = 1; j < count - 1; j++) {
 				if (player_rank[j - 1].score < player_rank[j].score) {
 					P_R = player_rank[j];
@@ -684,12 +678,12 @@ void Rank_arr() {
 				}
 			}
 		}
-		for (int i = 0; i < 9; i++) {     //¿©±â¿¡ ¼ıÀÚ9´Â ¿ª½Ã ³Ê°¡ Ãâ·ÂÇØÁÙ ·©Å·ÀÇ ¼ö¸¦ ÀÌ¾ß±â
+		for (int i = 0; i < 9; i++) {     //ì—¬ê¸°ì— ìˆ«ì9ëŠ” ì—­ì‹œ ë„ˆê°€ ì¶œë ¥í•´ì¤„ ë­í‚¹ì˜ ìˆ˜ë¥¼ ì´ì•¼ê¸°
 			if (i < 1) {
 			
 				Color(YELLOW);
 				gotoxy(20, 5 + i);
-				printf("¢Ä"); //Ã¹¹ø¤Š ¼øÀ§¸¦ º°·Î ¾Õ¿¡ ºÙ¿©ÁÖ´Â°Í
+				printf("â—"); //ì²«ë²ˆÂŠ ìˆœìœ„ë¥¼ ë³„ë¡œ ì•ì— ë¶™ì—¬ì£¼ëŠ”ê²ƒ
 
 			}
 			Color(GRAY);
@@ -712,7 +706,7 @@ void Rank_arr() {
 			}
 
 			gotoxy(25, 5 + i);
-			printf("%s", player_rank[i].name);  //·©Å·µé Ãâ·Â
+			printf("%s", player_rank[i].name);  //ë­í‚¹ë“¤ ì¶œë ¥
 			gotoxy(87, 5 + i);
 			printf("%d", player_rank[i].score);
 			Color(GRAY);
@@ -737,38 +731,38 @@ void Rank_System() {
 	
 	gotoxy(0, 15);
 	Color(BLUE);
-	printf("                     ¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú-¡Ú \n");
+	printf("                     â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜…-â˜… \n");
 	Color(GRAY);
 	char name[21] = "";
-	gotoxy(50, 20); printf("\n				    ·©Å·À» µî·ÏÇÏ½Ã°Ú½À´Ï±î ? (Y / N)");
+	gotoxy(50, 20); printf("\n				    ë­í‚¹ì„ ë“±ë¡í•˜ì‹œê² ìŠµë‹ˆê¹Œ ? (Y / N)");
 	
 	while (1) {
 		int num1 = keycontrol(0);
 		
 		if (num1 == 'Y' || num1 == 'y') {
 			FILE* fp = fopen("rank.txt", "a+");
-			//Å¸ÀÔÀ» a+(Àü¿¡ ÀÖ´ø µ¥ÀÌÅÍ¸¦ µ¤¾î¾²´Â°Ô ¾Æ´Ï¶ó ÀÖ´ø µ¥ÀÌÅÍ¿¡ Ãß°¡ÇÔ)·Î ¼³Á¤ÇØ Àü¿¡ÀÖ´ø ·©Å·µé°ú »õ·Î Ãß°¡µÈ ·©Å·µéÀÌ ÀÖÀ» ¼ö ÀÖ°ÔÇß´Ù.
+			//íƒ€ì…ì„ a+(ì „ì— ìˆë˜ ë°ì´í„°ë¥¼ ë®ì–´ì“°ëŠ”ê²Œ ì•„ë‹ˆë¼ ìˆë˜ ë°ì´í„°ì— ì¶”ê°€í•¨)ë¡œ ì„¤ì •í•´ ì „ì—ìˆë˜ ë­í‚¹ë“¤ê³¼ ìƒˆë¡œ ì¶”ê°€ëœ ë­í‚¹ë“¤ì´ ìˆì„ ìˆ˜ ìˆê²Œí–ˆë‹¤.
 			
 			if (fp == NULL) {
-				printf("       ÆÄÀÏ ·Îµù¿¡ ½ÇÆĞÇß½À´Ï´Ù.");
+				printf("       íŒŒì¼ ë¡œë”©ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
 			}
 			
-			gotoxy(50, 23); printf("\n				    10±ÛÀÚ ÀÌ³»·Î ´Ğ³×ÀÓÀ» Àû¾îÁÖ¼¼¿ä:");
+			gotoxy(50, 23); printf("\n				    10ê¸€ì ì´ë‚´ë¡œ ë‹‰ë„¤ì„ì„ ì ì–´ì£¼ì„¸ìš”:");
 			scanf("%s", name);
-			//name¹®ÀÚ¿­¹è¿­¿¡ ´Ğ³×ÀÓÀ» ÀúÀåÇÏ°í name¹è¿­¿¡ ¹®ÀÚ¿­À» fprintf¸¦ ÀÌ¿ëÇØ¼­ ÆÄÀÏ¿¡ ÀúÀåÇØÁØ´Ù.
+			//nameë¬¸ìì—´ë°°ì—´ì— ë‹‰ë„¤ì„ì„ ì €ì¥í•˜ê³  nameë°°ì—´ì— ë¬¸ìì—´ì„ fprintfë¥¼ ì´ìš©í•´ì„œ íŒŒì¼ì— ì €ì¥í•´ì¤€ë‹¤.
 			fprintf(fp, "%s  %d\n", name, score);
 
 			fclose(fp);
-			//¿À·ù°¡ ÀÏ¾î³ªÁö¾Ê°Ô ÆÄÀÏÀ» ´İ¾ÆÁÜ
+			//ì˜¤ë¥˜ê°€ ì¼ì–´ë‚˜ì§€ì•Šê²Œ íŒŒì¼ì„ ë‹«ì•„ì¤Œ
 			break;
 		}
 		else if (num1 == 'n' || num1 == 'N') {
 			break;
-			//nÀÌ ´­¸®¸é ·©Å·À» ÀÔ·Â¹ŞÁö ¾Ê°Ú´Ù´Â°ÍÀ¸·Î °£ÁÖ,¸ŞÀÎÈ­¸éÀ¸·Î µ¹·Áº¸³½´Ù
+			//nì´ ëˆŒë¦¬ë©´ ë­í‚¹ì„ ì…ë ¥ë°›ì§€ ì•Šê² ë‹¤ëŠ”ê²ƒìœ¼ë¡œ ê°„ì£¼,ë©”ì¸í™”ë©´ìœ¼ë¡œ ëŒë ¤ë³´ë‚¸ë‹¤
 		}
 	}
 
-	gotoxy(50, 30); printf("\n      ¡Ø ¿£ÅÍ¸¦ ´©¸£¸é ¸ŞÀÎ¸Ş´º·Î ÀÌµ¿ÇÕ´Ï´Ù...");
+	gotoxy(50, 30); printf("\n      â€» ì—”í„°ë¥¼ ëˆ„ë¥´ë©´ ë©”ì¸ë©”ë‰´ë¡œ ì´ë™í•©ë‹ˆë‹¤...");
 
 
 
